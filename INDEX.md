@@ -7,6 +7,7 @@ the same turn as any new file, command, route or board part (law 17).
 |---|---|---|
 | `AGENTS.md` (+ `QWEN.md`, `GEMINI.md` links) | start file for ANY agent: connect the tools on a new machine, rules for connecting CLIs, every-session steps | 37 |
 | `CLAUDE.md` | first thing every session (Claude); rules that never change | 17 |
+| `README.md` · `docs/readme/` | public front page: animated OpenTan Studio banner (the board intro's reveal ending on the title), board screenshots without client data | 36 |
 | `library/connections.json` · `studio doctor` | every tool: what for, required/optional, install, sign-in, check · doctor prints ready / MISSING / off + the fix | 37 |
 | `STUDIO.md` | banner laws · ROUTER · THE WORKFLOW (image · video · 3D) · Laws by director · GitHub repos · knowledge map · defaults · Owner laws 1–37 · law map · limits · commands | all |
 | `INDEX.md` | this map | 17 |
