@@ -1,0 +1,196 @@
+{
+  "regions": [
+    {
+      "id": "product",
+      "name": "Product as hero",
+      "note": "One real product, one flat field, hard light.",
+      "families": [
+        {
+          "id": "giant-type-hero", "name": "Giant type hero",
+          "rule": "The product sits in front of a word that fills the poster.",
+          "use": "A product to sell and one loud word or two.",
+          "words": ["big text", "big type", "huge text", "giant text", "bold type", "bold", "loud", "headline", "product poster", "packshot", "product shot", "can", "bottle", "pack", "pouch", "drink", "soft drink", "launch", "new flavour", "flavor", "energy", "punchy", "typography", "type heavy", "text behind"]
+        },
+        {
+          "id": "witty-object", "name": "Witty object",
+          "rule": "The product becomes the thing the line says.",
+          "use": "The line can be shown literally: the product or an object becomes the joke.",
+          "words": ["witty", "funny", "clever", "joke", "pun", "wordplay", "metaphor", "concept", "idea poster", "smart", "quirky", "meme", "sarcastic", "deadpan", "hinglish", "desi humour", "everyday object", "talking objects", "minimal idea"]
+        },
+        {
+          "id": "torn-reveal", "name": "Torn reveal",
+          "rule": "Torn paper shows the flavour or story inside.",
+          "use": "Showing what's inside: the flavour, the story, the new thing under the old.",
+          "words": ["torn", "tear", "torn paper", "rip", "reveal", "peel", "inside", "behind the scenes", "what is inside", "flavour reveal", "teaser", "unveil"]
+        },
+        {
+          "id": "ingredient-macro", "name": "Ingredient field",
+          "rule": "The ingredient fills the frame edge to edge.",
+          "use": "Freshness, origin or texture is the selling point.",
+          "words": ["ingredient", "fresh", "natural", "fruit", "real fruit", "farm", "pure", "organic", "close up", "macro", "detail", "texture", "condensation", "chilled", "cold", "premium detail"]
+        },
+        {
+          "id": "still-life-flash", "name": "Flash still life",
+          "rule": "A set in the product's colour, hard flash shadows.",
+          "use": "A premium mood: the product staged in a world of its own colour.",
+          "words": ["still life", "flat lay", "monochrome", "one colour", "tonal", "flash", "hard shadow", "fashion", "luxury", "premium", "aesthetic", "editorial product", "cocktail set", "table set"]
+        },
+        {
+          "id": "hand-held", "name": "Hand-held",
+          "rule": "A hand raises the product into saturated colour.",
+          "use": "A human moment with the product, simple and bright.",
+          "words": ["hand", "holding", "in hand", "cheers", "sip", "drinking", "refreshing", "summer", "sky", "lifestyle", "human touch", "toast"]
+        }
+      ]
+    },
+    {
+      "id": "print",
+      "name": "Print & editorial",
+      "note": "Paper, grain and grid carry the mood.",
+      "families": [
+        {
+          "id": "editorial-print", "name": "Editorial print",
+          "rule": "Paper grain, halftone, pasted photo panels.",
+          "use": "Mood and attitude over product: paper, grain and big statements.",
+          "words": ["magazine", "editorial", "print", "paper", "halftone", "retro print", "vintage", "zine", "duotone", "collage", "poster art", "old school", "newspaper", "riso", "risograph"]
+        },
+        {
+          "id": "editorial-grid", "name": "Catalogue grid",
+          "rule": "Strict modules, thin rules, small metadata.",
+          "use": "Calm premium information: specs, a range, a timeline.",
+          "words": ["grid", "catalogue", "catalog", "swiss", "clean", "minimal", "specs", "premium minimal", "spec sheet", "architecture", "museum", "structured", "modular"]
+        },
+        {
+          "id": "illustration", "name": "Illustration",
+          "rule": "A painted object and hand lettering.",
+          "use": "No photo needed, or the brand wants a warm handmade feel.",
+          "words": ["illustration", "illustrated", "painted", "drawn", "hand drawn poster", "cute", "playful art", "artwork", "flat art", "gouache"]
+        }
+      ]
+    },
+    {
+      "id": "culture",
+      "name": "Indian culture",
+      "note": "Real material culture, never a generic pattern.",
+      "families": [
+        {
+          "id": "culture-collage", "name": "Culture collage",
+          "rule": "Dense real objects around one calm hero.",
+          "use": "Indian pop culture, loud and dense, around one calm product.",
+          "words": ["indian", "desi", "india", "truck art", "bollywood", "street india", "maximal", "collage india", "local", "bazaar", "mela", "rickshaw", "pop india", "vibrant india", "karnataka pop", "mysore", "channapatna"]
+        },
+        {
+          "id": "culture-graphic", "name": "Culture graphic",
+          "rule": "A ritual object turned into a pop graphic.",
+          "use": "A festival or ritual turned into a pop graphic, never diya-and-gold templates.",
+          "words": ["festival", "diwali", "deepavali", "holi", "pongal", "sankranti", "ugadi", "onam", "dasara", "navratri", "ganesh", "eid", "christmas india", "nazar", "nimbu mirchi", "ritual", "tradition", "retro tamil", "retro kannada", "film star", "mass hero", "cinema india", "kannada pop", "karnataka", "kannada", "pop art", "desi pop", "local pop", "kannada flag"]
+        },
+        {
+          "id": "culture-editorial", "name": "Culture editorial",
+          "rule": "An unexpected local subject in a magazine layout.",
+          "use": "A real local place or people, quiet and specific, magazine-like.",
+          "words": ["street photo", "street", "kolkata", "bangalore", "mysore", "mandya", "village", "local life", "real people", "documentary", "slice of life", "nostalgia", "old city", "quiet", "emotional", "story"]
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "name": "People & events",
+      "note": "A face or an offer leads.",
+      "families": [
+        {
+          "id": "film-portrait", "name": "Film portrait",
+          "rule": "A person on a flat field, the title taller than them.",
+          "use": "A person leads: a face on a flat colour with a title taller than them.",
+          "words": ["film poster", "movie poster", "movie", "cinema", "release", "ott", "trailer", "actor", "character poster", "portrait", "face", "person", "model", "celebrity style", "tamil film", "kannada film", "first look"]
+        },
+        {
+          "id": "event-flyer", "name": "Event flyer",
+          "rule": "Offer, date and contacts in a tidy hierarchy.",
+          "use": "There's an offer, a date and contacts that must read clearly.",
+          "words": ["event", "flyer", "party", "offer", "discount", "sale", "% off", "happy hour", "night", "bar", "pub", "restaurant", "cafe", "menu", "date", "time", "venue", "reservation", "book now", "dj", "live music", "tuesday", "weekend", "launch event", "workshop"]
+        }
+      ]
+    },
+    {
+      "id": "play",
+      "name": "Photo play",
+      "note": "A real photo plus one hand-made layer: letters, doodles, stickers or broken scale.",
+      "families": [
+        {
+          "id": "lettering-wrap", "name": "Lettering wrap",
+          "rule": "Hand-made letters wrap the person, some behind, some in front.",
+          "use": "A person and a line of words: hand-made letters weave around them.",
+          "words": ["hand lettering", "lettering", "hand written", "handwritten", "letters around", "text around person", "words around", "wrap", "marker", "chalk", "brush letters", "typography portrait", "motivational", "quote", "gen z", "creator", "street style", "personal brand"]
+        },
+        {
+          "id": "doodle-overlay", "name": "Doodle overlay",
+          "rule": "Cartoon doodles come out of a real photo and play with it.",
+          "use": "A real photo that needs fun: food or clothes come alive as cartoons.",
+          "words": ["doodle", "doodles", "cartoon", "cartoon on photo", "drawn on photo", "scribble", "cute drawings", "fun food", "food comes alive", "smiley", "playful", "comic", "illustrated photo", "mixed media"]
+        },
+        {
+          "id": "surreal-scale", "name": "Surreal scale",
+          "rule": "Scale breaks: a giant head, a toy body, a person inside a bag.",
+          "use": "The idea is a size joke: giant, tiny, a person inside an object.",
+          "words": ["surreal", "weird", "strange", "giant", "tiny", "miniature", "toy", "big head", "scale", "absurd", "dreamy", "unexpected", "mind blowing", "crazy"]
+        },
+        {
+          "id": "sticker-cover", "name": "Sticker cover",
+          "rule": "A cut-out subject with stickers and cover metadata on a flat field.",
+          "use": "A cut-out subject dressed with stickers like a cover or merch drop.",
+          "words": ["sticker", "stickers", "cut out", "cutout", "magazine cover", "cover", "badge", "pins", "y2k", "kawaii", "pop", "zine cover", "fan edit", "merch"]
+        },
+        {
+          "id": "type-in-place", "name": "Type in place",
+          "rule": "The words are a real object in a real place.",
+          "use": "The words become a real object in a real place.",
+          "words": ["3d text", "3d type", "inflatable", "balloon letters", "text in real world", "words in the scene", "pool", "aerial", "top down", "drone", "summer vibe", "resort", "beach"]
+        }
+      ]
+    },
+    {
+      "id": "digital",
+      "name": "Digital break",
+      "note": "Screen language — pixels, grids, UI chrome, glitches — cut into a real photo.",
+      "families": [
+        {
+          "id": "pixel-glitch", "name": "Pixel glitch",
+          "rule": "Pixels or glitch blocks replace part of the face.",
+          "use": "Mystery or digital edge: part of the face breaks into pixels.",
+          "words": ["glitch", "pixel", "pixelated", "censored", "mosaic", "datamosh", "digital", "corrupted", "hidden face", "anonymous", "tech mood", "vaporwave"]
+        },
+        {
+          "id": "grid-swap", "name": "Grid swap",
+          "rule": "One subject split across a grid, each cell a new material.",
+          "use": "One subject shown in many materials or versions on a strict grid.",
+          "words": ["grid of", "material swap", "x ray", "x-ray", "robot", "chrome", "thermal", "transformation", "evolution", "many versions", "before after", "experiment", "innovation"]
+        },
+        {
+          "id": "interface-frame", "name": "Interface frame",
+          "rule": "Real UI chrome frames the photo; the subject breaks out.",
+          "use": "Screen life: real UI frames the photo and the subject breaks out.",
+          "words": ["ui", "interface", "app", "share sheet", "phone screen", "selection box", "figma", "design tool", "instagram", "screenshot", "social media", "post", "story", "reel", "breaking out", "out of the screen"]
+        },
+        {
+          "id": "type-window", "name": "Type window",
+          "rule": "Giant letters are windows onto the photo; the subject pops out.",
+          "use": "A big word that holds the photo, the subject bursting out of it.",
+          "words": ["text mask", "type mask", "photo inside letters", "letters with photo", "knockout", "window type", "sporty", "streetwear", "sneaker", "fisheye", "pop out", "3d pop"]
+        },
+        {
+          "id": "retro-screen", "name": "Retro screen",
+          "rule": "Something reaches out of an old computer into a collage world.",
+          "use": "Nostalgic tech or internet ideas, collage around an old computer.",
+          "words": ["retro computer", "old computer", "90s", "y2k computer", "windows 95", "floppy", "nostalgic tech", "internet", "web", "cyber collage", "reach out", "paper collage tech"]
+        },
+        {
+          "id": "floating-ui", "name": "Floating UI",
+          "rule": "Product screens float as glass panels around a real person.",
+          "use": "A digital product launch: real app screens float around a person.",
+          "words": ["saas", "software", "product ui", "dashboard", "app launch", "glass", "liquid glass", "floating cards", "spotify", "music app", "apple style", "tech launch", "startup", "ai product"]
+        }
+      ]
+    }
+  ]
+}

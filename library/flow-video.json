@@ -1,0 +1,198 @@
+{
+  "_about": "Google Flow, as Open TAN drives it (law 34). Prices read live from the create panel 2026-11-15 (tools/flow/panel.mjs + the Omni 1.2 Length slider walk; same prices in Frames and Ingredients, 16:9 and 9:16, x2 = 2 × x1). Model facts from Google's own Flow help center and model pages (sources below). Goal (owner 2026-11-15): the most video for the fewest credits — a clip ≤ 10 credits, at most 15 for 10 s.",
+  "budget": {
+    "clip": 10,
+    "clip_10s": 15,
+    "outputs": 1
+  },
+  "panel": {
+    "mode": "Image | Video",
+    "input": "Frames = start (and end) image, the prompt describes the move between them · Ingredients = reference images / characters / @Voice, named in the prompt",
+    "ratio": "Video 16:9 | 9:16 · Image 16:9 · 4:3 · 1:1 · 3:4 · 9:16",
+    "length": "Omni 1.1 Flash: buttons 4/6/8/10 s · Omni 1.2 Flash: Length slider 3–15 s · Veo 3.1 Lite: no switch (8 s)",
+    "resolution": "Omni only: 360p | 720p · Veo 3.1 Lite: 720p fixed",
+    "outputs": "x1–x4, each output full price — always x1",
+    "price": "footer 'Generating will use N credits' — read before every generation (tools/flow/set.mjs --expect)"
+  },
+  "account": {
+    "plan": "PRO (1,000 credits a month, reset each billing cycle, no roll-over) + 50 free credits a day (do not carry over)",
+    "credits_seen": 965,
+    "seen_at": "2026-11-15",
+    "resets": "7 Dec at 14:21",
+    "charged": "when a generation starts; failed or safety-blocked generations are refunded within ~1 h",
+    "visible_watermark": "required in India (the Veo wordmark; law 28 removes it from our clips); SynthID always stays",
+    "images": "Flow image generation costs NO credits: daily limits on PRO — Nano Banana Pro 100 / day, Nano Banana 2.1 + 2 Lite 1,000 / day shared, 2K upscale 200 / day"
+  },
+  "models": [
+    {
+      "model": "Omni 1.2 Flash",
+      "family": "Gemini Omni (Google DeepMind), released 2026-11-05",
+      "status": "current — Google's recommended model",
+      "seconds": {
+        "min": 3,
+        "max": 15,
+        "control": "slider"
+      },
+      "resolutions": [
+        "360p",
+        "720p"
+      ],
+      "audio": true,
+      "price": {
+        "360p": "1 credit / s up to 10 s, 2 / s for seconds 11–15",
+        "720p": "3 credits / s up to 10 s, 6 / s for seconds 11–15"
+      },
+      "examples": {
+        "360p 3s": 3,
+        "360p 4s": 4,
+        "360p 6s": 6,
+        "360p 8s": 8,
+        "360p 10s": 10,
+        "360p 15s": 20,
+        "720p 3s": 9,
+        "720p 4s": 12,
+        "720p 10s": 30,
+        "720p 15s": 60
+      },
+      "extras": "Extend (+3–10 s a turn, same per-second price, paid plans) · edit / refine an existing clip · upscale to 1080p free (≤ 10 s), 4K Ultra only · @Voice references (Ingredients) · up to 6 reference images",
+      "best": "consistency of faces, clothes, packaging text and brand colours; little morphing; better lip sync and several speakers; FPV, orbit, zoom-out camera moves",
+      "weak": "very fast sports, complex physics, quick script changes; cuts between shots by default — write 'single continuous shot, no scene cuts'"
+    },
+    {
+      "model": "Veo 3.1 - Lite",
+      "family": "Veo 3.1 (Google DeepMind), released 2026-03-31",
+      "status": "current — cheap 720p baseline",
+      "seconds": {
+        "fixed": 8
+      },
+      "resolutions": [
+        "720p"
+      ],
+      "audio": true,
+      "price": {
+        "720p 8s": 10
+      },
+      "extras": "Frames (first, or first + last) · Ingredients (8 s) · no Extend (Veo Extend retired 2026-11-05)",
+      "best": "cheapest real-looking 720p with sound (1.25 credits / s); beats Veo 3.1 Fast in Google's own comparison; cinematic camera language",
+      "weak": "fixed 8 s; short spoken lines can be unreliable"
+    },
+    {
+      "model": "Omni 1.1 Flash",
+      "family": "Gemini Omni",
+      "status": "retiring 2026-12-05 — use until then for exact short 720p lengths",
+      "seconds": {
+        "options": [
+          4,
+          6,
+          8,
+          10
+        ],
+        "control": "buttons"
+      },
+      "resolutions": [
+        "360p",
+        "720p"
+      ],
+      "audio": true,
+      "price": {
+        "720p 4s": 7,
+        "720p 6s": 10,
+        "720p 8s": 12,
+        "720p 10s": 15,
+        "360p 4s": 4,
+        "360p 6s": 5,
+        "360p 8s": 6,
+        "360p 10s": 7
+      },
+      "retires": "2026-12-05"
+    },
+    {
+      "model": "Veo 3.1 - Fast",
+      "status": "retiring 2026-12-05 — not used (Lite is better and half the price)",
+      "seconds": {
+        "fixed": 8
+      },
+      "price": {
+        "720p 8s": 20
+      },
+      "audio": true,
+      "retires": "2026-12-05"
+    },
+    {
+      "model": "Veo 3.1 - Quality",
+      "status": "retiring 2026-12-05 — owner says 'final' only",
+      "seconds": {
+        "fixed": 8
+      },
+      "price": {
+        "720p 8s": 100
+      },
+      "audio": true,
+      "retires": "2026-12-05"
+    }
+  ],
+  "image_models": [
+    {
+      "model": "Nano Banana Pro",
+      "credits": 0,
+      "daily": 100,
+      "best": "complex, detailed designs"
+    },
+    {
+      "model": "Nano Banana 2.1",
+      "credits": 0,
+      "daily": "1,000 shared with 2 Lite",
+      "best": "fast, high quality, better text, consistent characters — start frames and ingredients"
+    },
+    {
+      "model": "Nano Banana 2 Lite",
+      "credits": 0,
+      "daily": "1,000 shared",
+      "best": "free drafts"
+    }
+  ],
+  "prompting": {
+    "veo": "Cinematography + Subject + Action + Context + Style & ambiance; dialogue in quotes (A woman says, \"…\"); SFX: … ; Ambient noise: …",
+    "omni": "shot · subject · environment · motion · a sound line; 'single continuous shot, no scene cuts' or timecodes [0-5s] one action each; name the references ('Using the provided images for …'); exact on-screen words in quotes; 'No dialogue' / 'No extra sound effects' when unwanted; no negative-prompt field — write exclusions in the prompt",
+    "camera": "dolly, tracking, crane, aerial, slow pan, POV, wide, close-up, low angle, shallow depth of field, macro, wide-angle",
+    "language": "English only is fully supported"
+  },
+  "sources": [
+    "https://support.google.com/flow/answer/16352836",
+    "https://support.google.com/flow/answer/16526234",
+    "https://support.google.com/flow/answer/16353333",
+    "https://support.google.com/flow/answer/16353334",
+    "https://support.google.com/flow/answer/16935718",
+    "https://support.google.com/flow/answer/16729550",
+    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "https://aistudio.google.com/docs/omni",
+    "https://aistudio.google.com/docs/veo",
+    "https://deepmind.google/models/model-cards/veo-3-1-lite/",
+    "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1"
+  ],
+  "upscale": {
+    "tested": "2026-11-15",
+    "free": "Flow's own upscale is 0 credits for clips ≤ 10 s (balance unchanged in both tests)",
+    "offers": {
+      "360p clip": [
+        "270p GIF",
+        "360p Original size",
+        "720p Upscaled"
+      ],
+      "720p clip": [
+        "270p GIF",
+        "720p Original size",
+        "1080p Upscaled",
+        "4K Upscaled (Ultra only)"
+      ]
+    },
+    "quality": "Flow 720p upscale of an Omni 1.2 360p clip: label text and droplets crisp, ~6.5× the detail of a classic Lanczos upscale (TAN Upscaler)",
+    "time": "~35–40 s per 10 s clip",
+    "how": "tools/flow/upscale.mjs: clip's More options → Download → '<tier> Upscaled', Chrome's download routed straight into the job folder",
+    "routes": {
+      "720p": "Omni 1.2 Flash at 360p (1 credit / s) → Flow 720p — 10 s for 10 credits",
+      "1080p": "a native 720p clip (Veo 3.1 Lite 8 s = 10) → Flow 1080p"
+    },
+    "limit": "an upscaled download is not a Flow clip, so 360p → 720p → 1080p is not possible; 1080p needs a native 720p clip"
+  }
+}

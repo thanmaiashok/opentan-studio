@@ -1,0 +1,166 @@
+{
+  "about": "Every tool Open TAN drives, how to install it, how to sign in, and how to check it. Read by `bin/studio.mjs doctor` (law 37). One entry per tool; the agent installs, the human signs in. macOS only.",
+  "rules": [
+    "Run `node bin/studio.mjs doctor` first on a new machine and at the start of any session that fails a job. Fix the core rows top to bottom; connect the others only when a job needs them.",
+    "Install with the exact command in `install`. Never swap in another tool for the same job; the ROUTER in STUDIO.md names one tool per job.",
+    "Sign-ins are the human's: the agent runs the `login` command, the human finishes it in the browser or terminal. The agent never types a password, code or card.",
+    "Keys, cookies and sessions stay in each tool's own home (~/.codex, ~/.gflow, Blender prefs) or in .env.local (git-ignored). Never in the repo, never in a prompt, never in a log.",
+    "A row is connected only when doctor shows it ready. Never start a job on a tool doctor marks not ready.",
+    "Paid things (a plan, credits, a paid CLI) are the human's decision: ask first. Google Flow spends credits: obey law 34 (x1, budget, price check, live balance).",
+    "A new CLI only when a job needs it and no row covers it: `cli-hub can \"<job>\"`, then ask the human, then add it here with install, login and check, and add it to the ROUTER."
+  ],
+  "tools": [
+    {
+      "id": "node",
+      "name": "Node.js",
+      "group": "core",
+      "required": true,
+      "for": "bin/studio.mjs, the board, the Flow scripts",
+      "check": [
+        "node",
+        "--version"
+      ],
+      "ready": "^v(2[0-9]|[3-9][0-9])\\.",
+      "install": "brew install node   (Node 20 or newer)"
+    },
+    {
+      "id": "deps",
+      "name": "Repo packages",
+      "group": "core",
+      "required": true,
+      "for": "the board (Next.js) and sharp (logo placement, checks)",
+      "check": [
+        "node",
+        "-e",
+        "require.resolve('next');require.resolve('sharp');console.log('ok')"
+      ],
+      "ready": "ok",
+      "install": "npm install   (in the repo folder)"
+    },
+    {
+      "id": "python",
+      "name": "Python + numpy + OpenCV",
+      "group": "core",
+      "required": true,
+      "for": "bin/unmark.py (Gemini mark off, law 28), bin/upscale.py, bin/markmap.py",
+      "check": [
+        "python3",
+        "-c",
+        "import numpy, cv2; print('ok', cv2.__version__)"
+      ],
+      "ready": "^ok",
+      "install": "python3 -m pip install numpy opencv-python-headless   (if pip says externally-managed: brew install numpy opencv)"
+    },
+    {
+      "id": "ffmpeg",
+      "name": "ffmpeg (TAN Upscaler)",
+      "group": "core",
+      "required": true,
+      "for": "video ingest, unmark, edit export, TAN Upscaler (law 29)",
+      "check": [
+        "ffmpeg",
+        "-hide_banner",
+        "-filters"
+      ],
+      "ready": "\\bcas\\b",
+      "install": "brew install ffmpeg"
+    },
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "group": "core",
+      "required": true,
+      "for": "the board opens in it; Google Flow runs in its own Chrome window",
+      "check": [
+        "test",
+        "-d",
+        "/Applications/Google Chrome.app"
+      ],
+      "ready": "",
+      "install": "download from google.com/chrome into /Applications",
+      "version": false
+    },
+    {
+      "id": "codex",
+      "name": "ChatGPT (Codex CLI)",
+      "group": "image",
+      "required": true,
+      "for": "every poster and hero still (router: ChatGPT)",
+      "check": [
+        "codex",
+        "--version"
+      ],
+      "ready": "codex",
+      "login": [
+        "codex",
+        "login",
+        "status"
+      ],
+      "loggedIn": "logged in",
+      "install": "npm install -g @openai/codex",
+      "signin": "codex login   (human: sign in with the ChatGPT account that has image generation)"
+    },
+    {
+      "id": "flow",
+      "name": "Google Flow (gflow)",
+      "group": "video",
+      "required": false,
+      "for": "every video clip, bulk image drafts (router: Flow); credits, law 34",
+      "check": [
+        "gflow",
+        "--version"
+      ],
+      "ready": "\\d+\\.\\d+",
+      "login": [
+        "gflow",
+        "doctor",
+        "--no-headed"
+      ],
+      "loggedIn": "ready",
+      "loginTimeout": 60000,
+      "install": "npm install -g @swissmarley/gflow-cli",
+      "signin": "gflow auth login   (human: sign in to Google with the Flow plan in the Chrome window it opens), then node bin/studio.mjs credits"
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "group": "3d",
+      "required": false,
+      "for": "3D models, scenes, renders (law 24, 30, 32)",
+      "check": [
+        "$BLENDER",
+        "--version"
+      ],
+      "ready": "^Blender \\d",
+      "install": "download Blender 5.2 LTS from blender.org into /Applications (elsewhere: set BLENDER=/path/to/Blender)",
+      "signin": "optional live bridge: uvx mcp-for-blender install-addon, then turn the add-on on in Blender (port 9876)"
+    },
+    {
+      "id": "pin",
+      "name": "Pinterest (pin)",
+      "group": "image",
+      "required": false,
+      "for": "backup reference search only (law 13), logged out",
+      "check": [
+        "pin",
+        "version"
+      ],
+      "ready": "",
+      "install": "go install github.com/tamnd/pinterest-cli/cmd/pin@latest   (needs Go: brew install go)",
+      "version": false
+    },
+    {
+      "id": "cli-hub",
+      "name": "CLI Hub",
+      "group": "tools",
+      "required": false,
+      "for": "finding a CLI for a job no row covers",
+      "check": [
+        "cli-hub",
+        "--version"
+      ],
+      "ready": "\\d+\\.\\d+",
+      "install": "pipx install cli-anything-hub   (pipx: brew install pipx)"
+    }
+  ]
+}

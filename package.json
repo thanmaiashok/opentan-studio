@@ -1,0 +1,38 @@
+{
+  "name": "opentan-studio",
+  "private": true,
+  "version": "0.1.0",
+  "description": "OpenTan Studio \u2014 image, video and 3D studio run by any coding agent",
+  "license": "MIT",
+  "bin": {
+    "studio": "bin/studio.mjs"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@google/model-viewer": "^4.4.0",
+    "next": "^15.5.14",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.35.5"
+  },
+  "author": "Thanmai Ashok",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thanmaiashok/opentan-studio.git"
+  },
+  "homepage": "https://github.com/thanmaiashok/opentan-studio",
+  "keywords": [
+    "opentan",
+    "ai-studio",
+    "claude-code",
+    "codex",
+    "google-flow",
+    "blender",
+    "video-generation",
+    "image-generation"
+  ]
+}

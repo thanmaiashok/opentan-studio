@@ -1,0 +1,347 @@
+[
+  {
+    "name": "AI Headshot Studio",
+    "category": "Template",
+    "description": "Launch a headshot SaaS in minutes. Charge $5–$20 per set, keep all profits. Stripe payments & user accounts included.",
+    "demo": "https://ai-headshot-generator-xi.vercel.app/"
+  },
+  {
+    "name": "Nano Banana Studio",
+    "category": "Template",
+    "description": "Your own AI image generation platform, ready to monetize. Add credit packs or subscriptions and start earning from day one.",
+    "demo": "https://nano-banana-generator-psi.vercel.app"
+  },
+  {
+    "name": "Seedance V2 Studio",
+    "category": "Template",
+    "description": "Deploy a premium AI art studio and sell access to users. Full Stripe integration lets you collect revenue immediately after launch.",
+    "demo": "https://seedance-2-generator.vercel.app/"
+  },
+  {
+    "name": "AI Clipping Studio",
+    "category": "Template",
+    "description": "Launch your own AI-powered video clipping SaaS. Download YouTube videos and extract viral highlights with ease.",
+    "demo": "https://ai-clipping-generator.vercel.app/"
+  },
+  {
+    "name": "EasyVeo Studio",
+    "category": "Template",
+    "description": "The complete Veo 3.1 video generation suite. Monetize text-to-video, image-to-video, and reference-to-video workflows with ease.",
+    "demo": "https://veo4-video-generator.vercel.app/"
+  },
+  {
+    "name": "Pet Product Studio",
+    "category": "Lifestyle",
+    "description": "High-end product photography specifically for pet toys and food."
+  },
+  {
+    "name": "Resale Photo Enhancer",
+    "category": "Business",
+    "description": "Boost sales by elevating low-quality product photos to studio level."
+  },
+  {
+    "name": "AI Recruiter",
+    "category": "Business",
+    "description": "Smart candidate screening and interview assistant."
+  },
+  {
+    "name": "Talk to PDF",
+    "category": "Productivity",
+    "description": "Interactive document chat for deep research and summarization."
+  },
+  {
+    "name": "Blogger CMS",
+    "category": "Business",
+    "description": "AI-powered content management for high-velocity SEO blogs."
+  },
+  {
+    "name": "Amazon Product Studio",
+    "category": "Business",
+    "description": "Perfect Amazon-ready product shots with AI backdrops."
+  },
+  {
+    "name": "AI Business Card",
+    "category": "Business",
+    "description": "Digital-first business card generator with AI networking."
+  },
+  {
+    "name": "MailWise",
+    "category": "Business",
+    "description": "Intelligent email drafting and scheduling assistant."
+  },
+  {
+    "name": "My Podcast",
+    "category": "Creative",
+    "description": "Automated podcast editing and show-note generation."
+  },
+  {
+    "name": "EZScribe",
+    "category": "Productivity",
+    "description": "Instant transcription and meeting minute automation."
+  },
+  {
+    "name": "AI Knowledge Base",
+    "category": "Business",
+    "description": "Train an AI on your company data for instant support."
+  },
+  {
+    "name": "AI Outbound",
+    "category": "Business",
+    "description": "Personalized cold outreach at scale for sales teams."
+  },
+  {
+    "name": "AI Royal Portrait",
+    "category": "Creative",
+    "description": "Transform your photos into 18th-century royal oil paintings."
+  },
+  {
+    "name": "AI MEME",
+    "category": "Creative",
+    "description": "Viral-ready meme generation based on trending topics."
+  },
+  {
+    "name": "AI Real Estate Stager",
+    "category": "Real Estate",
+    "description": "Virtually furnish and stage empty homes for sale."
+  },
+  {
+    "name": "AI Logo",
+    "category": "Business",
+    "description": "Dynamic brand identity and logo generator."
+  },
+  {
+    "name": "OldPhoto",
+    "category": "Creative",
+    "description": "Restore, colorize, and sharpen vintage family photos."
+  },
+  {
+    "name": "AITryOn",
+    "category": "Lifestyle",
+    "description": "Virtual fitting room for fashion brands and enthusiasts."
+  },
+  {
+    "name": "AI Age Transformation",
+    "category": "Lifestyle",
+    "description": "Visualize yourself at different stages of life with high fidelity."
+  },
+  {
+    "name": "AI Professional Makeup Generator",
+    "category": "Lifestyle",
+    "description": "Try on hundreds of makeup looks virtually."
+  },
+  {
+    "name": "AI Flash Cards",
+    "category": "Education",
+    "description": "Turn any text or PDF into pedagogical flashcards."
+  },
+  {
+    "name": "AI Group Photo",
+    "category": "Creative",
+    "description": "Seamlessly combine individual portraits into a group photo."
+  },
+  {
+    "name": "AI Tattoo Try-On",
+    "category": "Lifestyle",
+    "description": "Visualize tattoos on your body before getting inked."
+  },
+  {
+    "name": "AI Hair Style Simulator",
+    "category": "Lifestyle",
+    "description": "Try on new haircuts and colors with zero commitment."
+  },
+  {
+    "name": "AI Kids-to-Adult Prediction",
+    "category": "Lifestyle",
+    "description": "Ever wonder what your kid will look like as an adult?"
+  },
+  {
+    "name": "AI Room Declutter",
+    "category": "Real Estate",
+    "description": "Instantly clean up messy room photos for listings."
+  },
+  {
+    "name": "AI Fitness Body Simulator",
+    "category": "Lifestyle",
+    "description": "Visualize your fitness goals on your own body."
+  },
+  {
+    "name": "AI Pet Portrait",
+    "category": "Lifestyle",
+    "description": "Elegant, artistic portraits for your beloved pets."
+  },
+  {
+    "name": "AI Kissing Video Generator",
+    "category": "Creative",
+    "description": "Expressive AI video generation for romantic moments."
+  },
+  {
+    "name": "Chat with PDF",
+    "category": "Productivity",
+    "description": "Ask questions and extract data from massive PDF files."
+  },
+  {
+    "name": "AI Travel Studio",
+    "category": "Lifestyle",
+    "description": "Create stunning travel posters and visuals from prompts."
+  },
+  {
+    "name": "Prompt Architect",
+    "category": "Creative",
+    "description": "Refine and optimize complex prompts for high-tier AI models."
+  },
+  {
+    "name": "ClearMark AI",
+    "category": "Business",
+    "description": "Automated watermark removal and brand cleanup for assets."
+  },
+  {
+    "name": "PlantVision AI",
+    "category": "Lifestyle",
+    "description": "Identify plants and generate gardening care guides."
+  },
+  {
+    "name": "AI Wedding Photo",
+    "category": "Lifestyle",
+    "description": "Cinematic wedding photography enhancements and filters."
+  },
+  {
+    "name": "User Account Registration Form",
+    "category": "Development",
+    "description": "Beautiful, conversion-optimized signup flows."
+  },
+  {
+    "name": "Social Post",
+    "category": "Marketing",
+    "description": "AI-generated social media scheduling and copy creator."
+  },
+  {
+    "name": "MagicSelf AI",
+    "category": "Creative",
+    "description": "The ultimate AI selfie and avatar generation engine."
+  },
+  {
+    "name": "AI Resume Builder",
+    "category": "Productivity",
+    "description": "Craft the perfect, ATS-friendly resume in seconds."
+  },
+  {
+    "name": "GEO Checker",
+    "category": "Business",
+    "description": "AI-powered location tagging and geodata validation."
+  },
+  {
+    "name": "AI Character Studio",
+    "category": "Creative",
+    "description": "Consistent character design for animators and writers."
+  },
+  {
+    "name": "Luxury Hair Studio",
+    "category": "Lifestyle",
+    "description": "High-end hair visualization for top-tier salons."
+  },
+  {
+    "name": "ProFlow Plumbing",
+    "category": "Services",
+    "description": "AI scheduling and diagnostics for plumbing services."
+  },
+  {
+    "name": "Solace AI",
+    "category": "Health",
+    "description": "Empathetic AI assistant for mental well-being support."
+  },
+  {
+    "name": "ReLive AI",
+    "category": "Creative",
+    "description": "Immersive memory and historical visualization engine."
+  },
+  {
+    "name": "AI Chiropractic Service",
+    "category": "Health",
+    "description": "Postural analysis and exercise recommendation AI."
+  },
+  {
+    "name": "Tabla - ReserveAI",
+    "category": "Services",
+    "description": "Intelligent table reservation engine for restaurants."
+  },
+  {
+    "name": "Dental ReserveAI",
+    "category": "Health",
+    "description": "Smart dental appointment and follow-up management."
+  },
+  {
+    "name": "CounselMate",
+    "category": "Legal",
+    "description": "Legal research and document drafting aid for lawyers."
+  },
+  {
+    "name": "Intelligent Real Estate Agent",
+    "category": "Real Estate",
+    "description": "Automate leads and property matches with AI agents."
+  },
+  {
+    "name": "Fixera",
+    "category": "Services",
+    "description": "Home repair diagnosis and pro-finding ecosystem."
+  },
+  {
+    "name": "Velora - Yoga AI",
+    "category": "Health",
+    "description": "Personalized AI yoga and posture guidance engine."
+  },
+  {
+    "name": "Nova AssuranceAI",
+    "category": "Legal",
+    "description": "Smart insurance quote and claim processing assistant."
+  },
+  {
+    "name": "TurboGlow Auto Spa",
+    "category": "Services",
+    "description": "AI booking and customization for luxury auto detailing."
+  },
+  {
+    "name": "Paws & Pals",
+    "category": "Lifestyle",
+    "description": "AI-powered pet care and walking coordination hub."
+  },
+  {
+    "name": "Vertex Tax Strategy",
+    "category": "Business",
+    "description": "Intelligent tax planning and deduction spotting AI."
+  },
+  {
+    "name": "LedgerSync",
+    "category": "Business",
+    "description": "Automated bookkeeping and financial reconciliations."
+  },
+  {
+    "name": "Nova Care Clinic",
+    "category": "Health",
+    "description": "Patient scheduling and medical intake automation."
+  },
+  {
+    "name": "Opulent Drive",
+    "category": "Services",
+    "description": "Luxury car rental and fleet management AI."
+  },
+  {
+    "name": "ProFix Auto",
+    "category": "Services",
+    "description": "Engine diagnostics and preventive maintenance alerts."
+  },
+  {
+    "name": "TowMate",
+    "category": "Services",
+    "description": "Smart roadside assistance and dispatch coordination."
+  },
+  {
+    "name": "SwiftLink Logistics",
+    "category": "Services",
+    "description": "AI route optimization and fleet tracking system."
+  },
+  {
+    "name": "Lumea Residence",
+    "category": "Real Estate",
+    "description": "Smart home property management and tenant portal."
+  }
+]

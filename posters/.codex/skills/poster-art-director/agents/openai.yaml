@@ -1,0 +1,5 @@
+interface:
+  display_name: "Poster Art Director"
+  short_description: "Create bold, aesthetic, product-led posters"
+  brand_color: "#E4472E"
+  default_prompt: "Use $poster-art-director to art-direct a distinctive, aesthetic poster."

@@ -1,0 +1,318 @@
+{
+  "_about": "3D Director (law 32, owner 2026-11-14: \"art director, video director … in 3D … we are going to name it as 3D Director\"; \"when we are going to generate any particular scenes … we have to use this [our shot method]\"). Our 3D shot types as studios. One entry = one studio card on the 3D Director page; `studio ddirect \"<owner's words>\"` picks the studio, `studio shot <id> <scene.blend|--text WORD>` builds it with tools/blender/shots.py on top of a finished model (law 30's six steps first) and renders it to 3D · Scenes, tagged with the studio (its own gallery under 3D Director). status: ready = `studio shot` builds it now · partial = runs with limits (see note) · none = recipe known, not built yet (build when the owner asks). source = the shot it is based on.",
+  "groups": [
+    "Product",
+    "Light & Camera",
+    "World & Type",
+    "Effects"
+  ],
+  "studios": [
+    {
+      "id": "packshot",
+      "group": "Product",
+      "label": "Packshot",
+      "icon": "render",
+      "status": "ready",
+      "kind": "still",
+      "what": "One clean hero still: big soft key, two strip lights for edge highlights, kicker, dark cyclorama.",
+      "source": "look rules · common.light / compositor",
+      "command": "studio shot packshot <scene.blend>",
+      "words": [
+        "packshot",
+        "product shot",
+        "hero still",
+        "catalogue",
+        "e-commerce",
+        "clean shot",
+        "still",
+        "photo of the product",
+        "white background",
+        "studio photo"
+      ]
+    },
+    {
+      "id": "turntable",
+      "group": "Product",
+      "label": "Turntable",
+      "icon": "turntable",
+      "status": "ready",
+      "kind": "anim",
+      "seconds": 4,
+      "what": "The product turns on its own axis under fixed studio light; camera still, every side shown.",
+      "source": "2B camera orbit around the car (inverted: product turns)",
+      "command": "studio shot turntable <scene.blend> [--seconds 4] [--turns 0.5]",
+      "words": [
+        "turntable",
+        "360",
+        "spin",
+        "rotate",
+        "turn around",
+        "all sides",
+        "rotating",
+        "showcase",
+        "product spin"
+      ]
+    },
+    {
+      "id": "orbit",
+      "group": "Product",
+      "label": "Hero Orbit",
+      "icon": "orbit",
+      "status": "ready",
+      "kind": "anim",
+      "seconds": 4,
+      "what": "Low three-quarter hero angle, camera arcs around the product on a wet dark floor with strip reflections.",
+      "source": "2F hero low 3/4 on wet floor, strip-light reflections",
+      "command": "studio shot orbit <scene.blend> [--seconds 4] [--wet]",
+      "words": [
+        "orbit",
+        "hero",
+        "around it",
+        "circle",
+        "low angle",
+        "car shot",
+        "premium",
+        "luxury",
+        "wet floor",
+        "reflection"
+      ]
+    },
+    {
+      "id": "exploded",
+      "group": "Product",
+      "label": "Exploded Assembly",
+      "icon": "exploded",
+      "status": "partial",
+      "kind": "anim",
+      "seconds": 4,
+      "what": "Parts float apart in an exploded view, then slam together one by one with a small overshoot.",
+      "source": "2B exploded-view car, parts slam together on the beat",
+      "command": "studio shot exploded <scene.blend> [--seconds 4]",
+      "note": "needs a model built from separate parts (each part its own object); a one-piece mesh has nothing to explode",
+      "words": [
+        "exploded",
+        "assembly",
+        "assemble",
+        "parts",
+        "come together",
+        "build itself",
+        "how it's made",
+        "components",
+        "teardown"
+      ]
+    },
+    {
+      "id": "reveal",
+      "group": "Light & Camera",
+      "label": "Light Sweep Reveal",
+      "icon": "sweep",
+      "status": "ready",
+      "kind": "anim",
+      "seconds": 4,
+      "what": "Out of darkness: a light strip sweeps across the product, the lights fade up, slow push-in.",
+      "source": "1A light sweep across brass teeth out of darkness · 6A title sweep",
+      "command": "studio shot reveal <scene.blend> [--seconds 4] [--motes]",
+      "words": [
+        "reveal",
+        "light sweep",
+        "out of darkness",
+        "unveil",
+        "dramatic",
+        "launch",
+        "intro",
+        "teaser",
+        "glint",
+        "shine"
+      ]
+    },
+    {
+      "id": "macro",
+      "group": "Light & Camera",
+      "label": "Macro Detail",
+      "icon": "macro",
+      "status": "ready",
+      "kind": "anim",
+      "seconds": 4,
+      "what": "Razor-thin focus close to the surface; slow lateral dolly with a rack focus from near to far.",
+      "source": "1C balance wheel macro · 1D lateral dolly across a gear train with rack focus",
+      "command": "studio shot macro <scene.blend> [--seconds 4]",
+      "words": [
+        "macro",
+        "close up",
+        "close-up",
+        "detail",
+        "texture",
+        "rack focus",
+        "shallow focus",
+        "bokeh",
+        "craftsmanship",
+        "finish"
+      ]
+    },
+    {
+      "id": "flythrough",
+      "group": "Light & Camera",
+      "label": "FPV Fly-through",
+      "icon": "fpv",
+      "status": "none",
+      "kind": "anim",
+      "what": "A drone flight threading through a mechanism or a space, banking hard, ending head-on on the hero.",
+      "source": "1E FPV through the clockwork · 3H slot-canyon chase",
+      "command": null,
+      "words": [
+        "fly through",
+        "fpv",
+        "drone",
+        "inside",
+        "through the",
+        "journey",
+        "travel through"
+      ]
+    },
+    {
+      "id": "haze",
+      "group": "Light & Camera",
+      "label": "Light Shafts",
+      "icon": "haze",
+      "status": "none",
+      "kind": "fx",
+      "what": "A thin local haze volume so a light draws a visible shaft; blacks stay black.",
+      "source": "K.haze local noisy haze box lit from the side · vol_only lights",
+      "command": null,
+      "words": [
+        "light rays",
+        "god rays",
+        "shafts",
+        "haze",
+        "fog",
+        "volumetric",
+        "smoke"
+      ]
+    },
+    {
+      "id": "studio-wet",
+      "group": "World & Type",
+      "label": "Dark Studio",
+      "icon": "studio",
+      "status": "ready",
+      "kind": "env",
+      "what": "A dark concrete studio: wet reflective floor with puddles, cool LED strips, a warm doorway glow.",
+      "source": "Act II studio (2A–2F): wet floor, linear strips, warm door spill",
+      "command": "add --wet to orbit / packshot",
+      "words": [
+        "dark studio",
+        "garage",
+        "showroom",
+        "wet floor",
+        "concrete",
+        "moody",
+        "strip lights",
+        "night"
+      ]
+    },
+    {
+      "id": "dusk",
+      "group": "World & Type",
+      "label": "Dusk Exterior",
+      "icon": "sun",
+      "status": "partial",
+      "kind": "env",
+      "what": "Low golden sun (3–6°), teal upper sky, warm horizon haze, rust-red rock.",
+      "source": "Act III canyon · common.world_sky",
+      "command": "kit world_sky(sun_elev=5) + mat_rock",
+      "note": "sky + light ready in the kit; no terrain generator yet — build when asked",
+      "words": [
+        "outdoor",
+        "sunset",
+        "golden hour",
+        "dusk",
+        "desert",
+        "landscape",
+        "sky",
+        "exterior",
+        "canyon"
+      ]
+    },
+    {
+      "id": "title",
+      "group": "World & Type",
+      "label": "Brass Title",
+      "icon": "type",
+      "status": "ready",
+      "kind": "anim",
+      "seconds": 4,
+      "what": "A word or brand name in machined brass, bevelled edges, revealed by a light sweep crossing the letters.",
+      "source": "a title word in machined brass, light sweep, to black",
+      "command": "studio shot title --text \"WORD\" [--font file.ttf] [--seconds 4]",
+      "words": [
+        "title",
+        "logo",
+        "brand name",
+        "3d text",
+        "type",
+        "lettering",
+        "end card",
+        "name in gold",
+        "brass text",
+        "golden logo"
+      ]
+    },
+    {
+      "id": "motes",
+      "group": "Effects",
+      "label": "Dust in the Light",
+      "icon": "motes",
+      "status": "ready",
+      "kind": "fx",
+      "what": "A few tiny dust motes drifting through the light, mostly out of focus — never glowing sparkles.",
+      "source": "client rule: effects must look real · act1 motes",
+      "command": "add --motes to any shot",
+      "words": [
+        "dust",
+        "motes",
+        "particles",
+        "atmosphere",
+        "air",
+        "floating specks"
+      ]
+    },
+    {
+      "id": "sparks",
+      "group": "Effects",
+      "label": "Hot Sparks",
+      "icon": "spark",
+      "status": "none",
+      "kind": "fx",
+      "what": "Few, short hot-metal sparks: white-yellow core cooling to orange, gravity, bounce, motion blur.",
+      "source": "2B/2C panel lock + sparks",
+      "command": null,
+      "words": [
+        "sparks",
+        "welding",
+        "grinding",
+        "metal sparks",
+        "impact"
+      ]
+    },
+    {
+      "id": "disintegrate",
+      "group": "Effects",
+      "label": "Disintegrate",
+      "icon": "voxels",
+      "status": "none",
+      "kind": "fx",
+      "what": "A surface breaks into real material chunks that blow away, revealing what is behind.",
+      "source": "2G studio disintegrates into voxels (geometry nodes)",
+      "command": null,
+      "words": [
+        "disintegrate",
+        "break apart",
+        "shatter",
+        "dissolve",
+        "crumble",
+        "blow away",
+        "voxels"
+      ]
+    }
+  ]
+}

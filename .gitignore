@@ -1,0 +1,44 @@
+# dependencies and build caches
+node_modules/
+.next/
+.run/
+__pycache__/
+.DS_Store
+
+# secrets stay on this Mac (keys in .env.local; cookies never in the repo)
+.env
+.env.*
+.env*.local
+!.env.example
+cookies*.txt
+*.cookies
+
+# made media, jobs and settings live only on this Mac
+outputs/
+data/
+
+# poster reference media (local only)
+posters/**/*.png
+posters/**/*.jpg
+posters/**/*.jpeg
+posters/**/*.webp
+posters/**/*.pptx
+posters/tmp/
+
+# reference reels the owner sends (study only, never in the repo)
+library/video-refs/**/*.mp4
+library/video-refs/**/*.m4a
+library/video-refs/**/*.png
+library/video-refs/**/*.jpg
+
+# private: client work, licensed assets, study material (stay on this Mac, never in the public repo — law 36)
+/briefs/*
+!/briefs/.gitkeep
+/library/clients.json
+/library/clients/
+/library/textures/texturelabs/
+/library/video-refs/
+/library/watermarks/
+/posters/*
+!/posters/.codex/
+*.blend1

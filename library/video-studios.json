@@ -1,0 +1,439 @@
+{
+  "_about": "Video studios (law 25): the studios of the original studio + Genjutsu and DoP presets, mapped to what Open TAN can run. One entry = one studio card on the Video Director page (the owner's words pick the studio: `studio vdirect`). status: ready = runs now · partial = runs in part / by a workaround · none = needs an engine (the owner picks; ask before anything paid). Source: git HEAD packages/studio (original repo), notes/CAMERA-MAP.md.",
+  "groups": [
+    "Create",
+    "People",
+    "Remix",
+    "Business"
+  ],
+  "studios": [
+    {
+      "id": "make",
+      "group": "Create",
+      "label": "Text & Image to Video",
+      "icon": "play",
+      "what": "A shot from a prompt, or a still that starts (and ends) the shot.",
+      "inputs": [
+        "Prompt",
+        "Start frame (optional)",
+        "End frame (optional)",
+        "Ratio · 16:9 or 9:16",
+        "Duration"
+      ],
+      "status": "ready",
+      "engine": "Google Flow · Veo 3.1 (gflow)",
+      "command": "studio video \"<prompt>\" [--start-frame img] [--end-frame img] [--ratio 16:9] [--duration 8]",
+      "options": [
+        "Kling 3 / 4",
+        "Seedance 2.x",
+        "Wan 2.x (local via Wan2GP or a Kaggle GPU)",
+        "Hailuo / MiniMax"
+      ],
+      "original": "Video Studio — text-to-video (40+ models) and image-to-video (60+ models)",
+      "words": [
+        "text to video",
+        "image to video",
+        "animate this",
+        "bring it to life",
+        "make it move",
+        "short clip",
+        "b-roll",
+        "start frame",
+        "end frame",
+        "shot"
+      ],
+      "flow": {
+        "models": [
+          "Veo 3.1 - Lite",
+          "Omni 1.1 Flash",
+          "Omni 1.2 Flash"
+        ],
+        "input": "ingredients · frames when a start / end image is given",
+        "why": "8 s with sound for 10 credits is the best value; exact 4–6 s → Omni 1.1 (until 5 Dec), 3 s → Omni 1.2"
+      }
+    },
+    {
+      "id": "cinema",
+      "group": "Create",
+      "label": "Cinema",
+      "icon": "aperture",
+      "what": "A cinematic shot built from a real camera, lens, focal length and aperture.",
+      "inputs": [
+        "Prompt",
+        "Camera",
+        "Lens",
+        "Focal length · 8–85 mm",
+        "Aperture · f/1.4 · f/4 · f/11"
+      ],
+      "status": "ready",
+      "engine": "Google Flow · Veo 3.1 + library/cinema.mjs",
+      "command": "studio video \"<prompt>\" --cinema \"<camera>|<lens>|<mm>|<f-stop>\"",
+      "options": [],
+      "original": "Cinema Studio — 6 cameras, 11 lenses, 6 focal lengths, 3 apertures turned into prompt modifiers",
+      "words": [
+        "cinematic",
+        "film look",
+        "movie",
+        "anamorphic",
+        "35mm",
+        "shallow depth",
+        "bokeh",
+        "lens",
+        "camera body",
+        "film grain",
+        "golden hour"
+      ],
+      "flow": {
+        "models": [
+          "Veo 3.1 - Lite"
+        ],
+        "input": "ingredients (or frames from a Nano Banana still)",
+        "why": "Veo reads real camera / lens language best; 8 s, sound, 10 credits"
+      }
+    },
+    {
+      "id": "moves",
+      "group": "Create",
+      "label": "Camera Moves & Effects",
+      "icon": "orbit",
+      "what": "One named move or effect per shot: a preset is a fixed prompt template + settings; you add a still or a line.",
+      "inputs": [
+        "Start frame",
+        "Preset",
+        "Short prompt (optional)"
+      ],
+      "status": "partial",
+      "engine": "Google Flow · Veo 3.1 (the move written into the prompt; no preset templates saved yet)",
+      "command": "studio video \"<subject>, <move>\" --start-frame img",
+      "options": [
+        "DoP",
+        "Kling motion presets"
+      ],
+      "presets": {
+        "Basic camera": [
+          "Static",
+          "Handheld",
+          "Dolly Zoom In",
+          "Crash Zoom In",
+          "Arc Right",
+          "3D Rotation",
+          "Roll Transition"
+        ],
+        "Epic camera": [
+          "FPV Drone",
+          "Earth Zoom Out",
+          "Eyes In",
+          "Mouth In",
+          "Snowboard Powder"
+        ],
+        "Effects": [
+          "Face Punch",
+          "Clone Explosion",
+          "Freezing",
+          "Head Off",
+          "Garden Bloom",
+          "Innerlight",
+          "Thunder God",
+          "Duplicate",
+          "Disintegration",
+          "Glowing Fish",
+          "Turning Metal",
+          "Melting",
+          "Set on Fire",
+          "Building Explosion",
+          "Black Tears",
+          "Head Explosion"
+        ]
+      },
+      "original": "DoP — presets with filter chips: Effects · Basic Camera Control · Epic Camera Control · Catch the Pulse · Mix",
+      "words": [
+        "camera move",
+        "dolly",
+        "zoom",
+        "crash zoom",
+        "orbit",
+        "fpv",
+        "drone",
+        "handheld",
+        "effect",
+        "explosion",
+        "melting",
+        "disintegrate",
+        "on fire",
+        "transition"
+      ],
+      "flow": {
+        "models": [
+          "Omni 1.2 Flash",
+          "Veo 3.1 - Lite"
+        ],
+        "input": "frames (start still from Image, free)",
+        "why": "Omni is strongest on FPV, orbit and zoom-out moves; within budget at 720p only for 3 s (9) → else Veo Lite 8 s"
+      }
+    },
+    {
+      "id": "lipsync",
+      "group": "People",
+      "label": "Lip Sync",
+      "icon": "mouth",
+      "what": "A face speaks a voice: a portrait + audio becomes a talking video, or a video's lips are re-synced to new audio.",
+      "inputs": [
+        "Portrait image or face video",
+        "Audio (voice)",
+        "Prompt for motion (optional)"
+      ],
+      "status": "partial",
+      "engine": "Google Flow · Veo 3.1 speaks a line you write, in its own voice. Driving a face with your own audio needs a lip-sync engine.",
+      "command": "studio video \"<person> says: '<line>'\" --start-frame portrait.png --studio lipsync",
+      "options": [
+        "Image + audio: Infinite Talk · Wan 2.2 Speech-to-Video · LTX 2.3 Lipsync",
+        "Video + audio: Sync Lipsync · LatentSync · Creatify · Veed · Infinite Talk V2V",
+        "Open source on a free Kaggle GPU: LatentSync · Infinite Talk · Wan 2.2 S2V"
+      ],
+      "original": "Lip Sync Studio — 9 models across Portrait Image and Video modes",
+      "words": [
+        "lip sync",
+        "lipsync",
+        "talking",
+        "talking head",
+        "speak",
+        "says",
+        "voiceover on face",
+        "dub",
+        "avatar speaking",
+        "audio to face"
+      ],
+      "flow": {
+        "models": [
+          "Omni 1.2 Flash",
+          "Veo 3.1 - Lite"
+        ],
+        "input": "ingredients + @Voice (Omni only)",
+        "why": "Omni 1.2 has the better lip sync, several speakers and custom voices; Veo Lite speaks a written line with its own voice for 10"
+      }
+    },
+    {
+      "id": "influencer",
+      "group": "People",
+      "label": "AI Influencer",
+      "icon": "person",
+      "what": "One consistent made-up person (face, body, style) used again and again across stills and video.",
+      "inputs": [
+        "Builder: face · body · style",
+        "Character sheet (reference images)",
+        "Scene prompt"
+      ],
+      "status": "partial",
+      "engine": "Character sheet with studio ref character (Flow images) → studio video --start-frame",
+      "command": "studio ref character \"<description>\" → studio video \"<scene>\" --start-frame <sheet image>",
+      "options": [
+        "Seedance / Kling with character references",
+        "a trained LoRA on a Kaggle GPU"
+      ],
+      "original": "AI Influencer Studio — builder with Face / Body / Style tabs",
+      "words": [
+        "influencer",
+        "persona",
+        "same character",
+        "consistent character",
+        "model",
+        "ugc",
+        "creator",
+        "face of the brand"
+      ],
+      "flow": {
+        "models": [
+          "Omni 1.2 Flash",
+          "Veo 3.1 - Lite"
+        ],
+        "input": "ingredients: the character sheet (made free on Nano Banana)",
+        "why": "Omni keeps a face, body and clothes the same across clips (up to 6 references)"
+      }
+    },
+    {
+      "id": "recast",
+      "group": "People",
+      "label": "Recast",
+      "icon": "swap",
+      "what": "Swap the person in a video for your character; the motion, camera and scene stay.",
+      "inputs": [
+        "Video",
+        "Character image"
+      ],
+      "status": "none",
+      "engine": "No engine yet",
+      "command": "",
+      "options": [
+        "Wan 2.2 Animate (replace mode, open source; local or Kaggle GPU)",
+        "Kling motion control",
+        "Recast"
+      ],
+      "original": "Recast Studio — Video + Character image → Swap Body",
+      "words": [
+        "recast",
+        "body swap",
+        "replace person",
+        "swap actor",
+        "put me in",
+        "character swap"
+      ],
+      "flow": {
+        "models": [
+          "Omni 1.2 Flash"
+        ],
+        "input": "video + character image (Omni edit / refine)",
+        "why": "Omni 1.2 can edit an existing clip at the normal per-second price — not built yet"
+      }
+    },
+    {
+      "id": "genjutsu",
+      "group": "Remix",
+      "label": "Genjutsu",
+      "icon": "remix",
+      "what": "Turn one video into many: keep its motion, change who and what is in it, or redraw it in a style.",
+      "inputs": [
+        "Reference video · 4–30 s",
+        "Up to 30 images: characters, products, clothes",
+        "Mode: Motion transfer · Objects swap · Restyle"
+      ],
+      "status": "none",
+      "engine": "No engine yet",
+      "command": "",
+      "options": [
+        "Kling motion control (motion transfer)",
+        "Wan 2.2 Animate (open source)",
+        "Runway Aleph / Luma Modify (restyle)",
+        "Genjutsu"
+      ],
+      "original": "Motion Control Studio (Motion Transfer · Objects Swap) + Genjutsu (Motion Library, Styles)",
+      "words": [
+        "genjutsu",
+        "motion transfer",
+        "copy the dance",
+        "same motion",
+        "objects swap",
+        "restyle",
+        "remix video",
+        "turn one video into many",
+        "trend",
+        "jujitsu"
+      ],
+      "flow": {
+        "models": [
+          "Omni 1.2 Flash"
+        ],
+        "input": "reference video + images (Omni edit / refine)",
+        "why": "motion transfer / restyle through Omni 1.2 edit — not built yet"
+      }
+    },
+    {
+      "id": "vibe",
+      "group": "Remix",
+      "label": "Vibe Motion",
+      "icon": "spark",
+      "what": "Motion graphics written as code: type, shapes, charts, UI, rendered to video. No model hallucination.",
+      "inputs": [
+        "Brief or script",
+        "Brand (logo, colours)",
+        "Ratio"
+      ],
+      "status": "partial",
+      "engine": "Made by code on this Mac (HyperFrames / FoxMotion), not a video model; not yet linked to this board",
+      "command": "",
+      "options": [],
+      "original": "Vibe Motion Studio — React / Remotion motion graphics, remixable",
+      "words": [
+        "motion graphics",
+        "kinetic type",
+        "animated text",
+        "explainer",
+        "ui animation",
+        "logo animation",
+        "data video",
+        "chart animation"
+      ],
+      "flow": {
+        "models": [],
+        "input": "code (FoxMotion)",
+        "why": "motion graphics are rendered from code: 0 credits"
+      }
+    },
+    {
+      "id": "marketing",
+      "group": "Business",
+      "label": "Marketing Ads",
+      "icon": "megaphone",
+      "what": "A video ad from a product and an avatar: product, person and script in one shot.",
+      "inputs": [
+        "Product image",
+        "Avatar image",
+        "Ad script",
+        "Format · ratio · duration"
+      ],
+      "status": "partial",
+      "engine": "Poster or product still (law 6 kit) as the start frame → Google Flow · Veo 3.1",
+      "command": "studio video \"<ad scene + line>\" --start-frame <product still> --client \"<client>\"",
+      "options": [
+        "Creatify / Arcads-style avatar ads",
+        "Seedance with product + avatar references"
+      ],
+      "original": "Marketing Studio — Product + Avatar + References slots, @image mentions, format presets",
+      "words": [
+        "ad",
+        "advert",
+        "commercial",
+        "promo",
+        "product video",
+        "product ad",
+        "launch video",
+        "sale",
+        "offer",
+        "campaign"
+      ],
+      "flow": {
+        "models": [
+          "Omni 1.2 Flash",
+          "Veo 3.1 - Lite"
+        ],
+        "input": "ingredients: real product photo + avatar",
+        "why": "Omni holds packaging text and brand colours; product spins and ads are its listed uses"
+      }
+    },
+    {
+      "id": "clipping",
+      "group": "Business",
+      "label": "AI Clipping",
+      "icon": "scissors",
+      "what": "A long video becomes short clips: find the strongest moments, cut them, reframe to 9:16.",
+      "inputs": [
+        "Long video or YouTube link",
+        "Clip count",
+        "Ratio"
+      ],
+      "status": "none",
+      "engine": "No engine yet (possible locally: transcript + ffmpeg cuts)",
+      "command": "",
+      "options": [
+        "Local: whisper transcript + ffmpeg + face-tracked reframe",
+        "Opus Clip-style service"
+      ],
+      "original": "AI Clipping Studio — highlights timeline, extracted clips, aspect ratio",
+      "words": [
+        "clip",
+        "clips",
+        "shorts",
+        "highlights",
+        "cut down",
+        "viral moments",
+        "podcast clips",
+        "reels from video",
+        "long video"
+      ],
+      "flow": {
+        "models": [],
+        "input": "local cut of a long video",
+        "why": "no generation: 0 credits"
+      }
+    }
+  ]
+}
